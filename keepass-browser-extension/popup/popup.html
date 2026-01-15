@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeePass Browser Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔐 KeePass</h1>
+      <div id="status-indicator" class="status-indicator">
+        <span id="status-text">Checking...</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Connection Status -->
+      <div id="connection-section" class="section">
+        <div class="connection-info">
+          <div id="connection-status" class="status-box checking">
+            <div class="status-icon">⏳</div>
+            <div class="status-details">
+              <div class="status-label">Status</div>
+              <div id="connection-text" class="status-value">Checking connection...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credentials Section -->
+      <div id="credentials-section" class="section" style="display: none;">
+        <h2>Available Credentials</h2>
+        <div id="credentials-list" class="credentials-list">
+          <!-- Credentials will be populated here -->
+        </div>
+        <div id="no-credentials" class="no-data" style="display: none;">
+          <p>No credentials found for this site</p>
+        </div>
+      </div>
+
+      <!-- Error Section -->
+      <div id="error-section" class="section error" style="display: none;">
+        <h2>⚠️ Connection Error</h2>
+        <p id="error-message"></p>
+        <div class="error-actions">
+          <button id="retry-button" class="button button-secondary">Retry</button>
+          <button id="help-button" class="button button-secondary">Help</button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div id="actions-section" class="section actions">
+        <button id="refresh-button" class="button button-primary">
+          🔄 Refresh Credentials
+        </button>
+        <button id="settings-button" class="button button-secondary">
+          ⚙️ Settings
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <span>KeePass Browser Extension v1.0.0</span>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

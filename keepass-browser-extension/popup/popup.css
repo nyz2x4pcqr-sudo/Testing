@@ -1,0 +1,290 @@
+/**
+ * Popup UI Styles
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  min-height: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+#status-text {
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Connection Status */
+.connection-info {
+  margin-bottom: 16px;
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.status-box.connected {
+  border-color: #4CAF50;
+  background: #f1f8f4;
+}
+
+.status-box.disconnected {
+  border-color: #f44336;
+  background: #fef1f0;
+}
+
+.status-box.checking {
+  border-color: #2196F3;
+  background: #f0f7ff;
+}
+
+.status-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.status-details {
+  flex: 1;
+}
+
+.status-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.status-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Credentials List */
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.credential-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.credential-item:hover {
+  border-color: #4CAF50;
+  background: #f9fef9;
+  box-shadow: 0 2px 4px rgba(76,175,80,0.1);
+}
+
+.credential-item:active {
+  transform: scale(0.98);
+}
+
+.credential-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.credential-username {
+  font-size: 12px;
+  color: #666;
+}
+
+.credential-domain {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  padding: 32px 16px;
+  color: #666;
+}
+
+.no-data p {
+  margin: 0;
+}
+
+/* Error Section */
+.section.error {
+  background: #fef1f0;
+  border: 2px solid #f44336;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.section.error h2 {
+  color: #d32f2f;
+  margin-bottom: 8px;
+}
+
+.section.error p {
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.error-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.button-primary:hover {
+  background: #45a049;
+  box-shadow: 0 2px 4px rgba(76,175,80,0.3);
+}
+
+.button-secondary {
+  background: white;
+  color: #666;
+  border: 1px solid #e0e0e0;
+}
+
+.button-secondary:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Footer */
+footer {
+  padding: 12px 16px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

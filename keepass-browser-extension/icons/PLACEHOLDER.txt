@@ -1,0 +1,16 @@
+IMPORTANT: Icon files must be generated before loading the extension.
+
+Run the following command to generate the required PNG icons:
+
+    cd icons/
+    ./generate-icons.sh
+
+Or manually create PNG files:
+- icon16.png (16x16)
+- icon32.png (32x32)  
+- icon48.png (48x48)
+- icon128.png (128x128)
+
+See README.md in this directory for detailed instructions.
+
+Alternatively, you can use any PNG images with the correct sizes as placeholders.
