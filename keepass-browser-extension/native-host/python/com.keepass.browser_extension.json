@@ -1,0 +1,12 @@
+{
+  "name": "com.keepass.browser_extension",
+  "description": "KeePass Browser Extension Native Messaging Host",
+  "path": "/path/to/keepass_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://YOUR_EXTENSION_ID/"
+  ],
+  "allowed_extensions": [
+    "keepass-extension@example.com"
+  ]
+}
